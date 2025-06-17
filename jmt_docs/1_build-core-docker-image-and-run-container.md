@@ -28,18 +28,22 @@ So 2 images are built from these commands and are tagged as:
 
 After building the images above, the following script may be used for convenience.  To run a core container and get a bash shell into it:
 ~~~
-$ bash 2_run_containers.sh
+$ bash 1-1_run_containers.sh
 ~~~
 
 To stop the container do:
 ~~~
-$ bash 3_stop_containers.sh
+$ bash 1-2_stop_containers.sh
 ~~~
 
 ## Cleaning up a docker run session
 
-Make sure you follow usual Docker clean up etiquette (the script [3_stop_containers.sh](./3_stop_containers.sh) does this):
+Make sure you follow usual Docker clean up etiquette:
+~~~
+$ bash 1-3_stop_containers.sh
+~~~
 
+Or do it manually:
 ~~~
 $ docker stop core
 $ docker rm core
